@@ -1,0 +1,13 @@
+name: run
+
+
+on: workflow_dispatch
+
+jobs:
+  demo_test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: PrintEnv
+      run: printenv
