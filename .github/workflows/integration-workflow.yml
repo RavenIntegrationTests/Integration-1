@@ -10,9 +10,7 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
     steps:
-    
-    - name: use_composite_acion
-      uses: RavenIntegrationTests/CompositeAction-Mock@v1
+    - uses: RavenIntegrationTests/CompositeAction-Mock@v1
       
     - name: print_env
       run: print_env
