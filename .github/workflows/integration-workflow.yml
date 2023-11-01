@@ -10,16 +10,17 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
     steps:
-    - uses: RavenIntegrationTests/CompositeAction-Mock@v1
-      name: use_composite_acion
-
+    
+    - name: use_composite_acion
+      uses: RavenIntegrationTests/CompositeAction-Mock@v1
+      
     - name: print_env
       run: print_env
     
   second_job:
     runs-on: ubuntu-latest
     steps:
+
     - name: print_pull_request_title
       run: echo "Pull request title is ${{ github.event.pull_request.title }}"
-    
   
