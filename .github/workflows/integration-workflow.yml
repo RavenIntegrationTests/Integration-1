@@ -11,10 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: RavenIntegrationTests/CompositeAction-Mock@v1
+      name: use composite acion
 
     - name: PrintEnv
       run: PrintEnv
     
+  second_job:
     - name: Print pull request title
       run: echo "Pull request number is ${{ github.event.pull_request.title }}"
     
